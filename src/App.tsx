@@ -260,24 +260,42 @@ export default function App() {
           ) : null}
         </AnimatePresence>
 
-        {/* Regular Landing Sections */}
-        <Hero onNavClick={handleScrollToSection} />
-        
-        <Services onServiceSelect={handleServiceSelect} />
-        
-        <QuoteCalculator
-          onQuoteSubmit={handleAddInquiry}
-          preselectedService={preferredService}
-        />
-        
-        <BrandPartners />
-        
-        <AboutOwner />
-        
-        <ContactForm
-          onContactSubmit={handleAddInquiry}
-          preferredService={preferredService}
-        />
+    {/* Regular Landing Sections */}
+
+<section id="hero">
+  <Hero onNavClick={handleScrollToSection} />
+</section>
+
+
+<section id="services">
+  <Services onServiceSelect={handleServiceSelect} />
+</section>
+
+
+<section id="calculator">
+  <QuoteCalculator
+    onQuoteSubmit={handleAddInquiry}
+    preselectedService={preferredService}
+  />
+</section>
+
+
+<section id="brands">
+  <BrandPartners />
+</section>
+
+
+<section id="about">
+  <AboutOwner />
+</section>
+
+
+<section id="contact">
+  <ContactForm
+    onContactSubmit={handleAddInquiry}
+    preferredService={preferredService}
+  />
+</section>
 
       </main>
 
